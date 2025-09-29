@@ -16,7 +16,7 @@ class Cinema {
         //Exibe o layout atual das cadeiras (acima das informações) 
         console.log("\n" + "-".repeat(50));
         console.log("           TELA DO CINEMA");
-        console.log("=".repeat(50));
+        console.log("-".repeat(50));
         console.log("     Fileira 1  Fileira 2  Fileira 3  Fileira 4");
         
         // Mostra as cadeiras (acima)
@@ -88,7 +88,4 @@ class Cinema {
 
 // Inicializa o sistema
 const cinema = new Cinema();
-console.log("SISTEMA DE VENDA DE INGRESSOS - CINEMA 4x4");
-console.log("O sistema ficará em loop contínuo para atender todos os clientes");
-
 cinema.executarSistema();
