@@ -53,7 +53,7 @@ class Cinema {
                     continue;
                 }
                 
-                // Reserva a cadeira pedida pela última pessoa
+                // Reserva a cadeira pedida pela última pessoa (que pediu)
                 this.cadeiras[linha][fileira] = 'X';
                 console.log("\nCOMPRA CONFIRMADA!");
                 console.log(`Cadeira reservada: Linha ${linha + 1}, Fileira ${fileira + 1}`);
