@@ -31,7 +31,7 @@ function main() {
     // Exibe a matriz formatada
     console.log("\n--- MATRIZ ---");
     for (let i = 0; i < 3; i++) {
-        console.log(`[ ${matriz[i].map(val => val.toString().padStart(6)).join(' ')} ]`);
+        console.log(`[${matriz[i].map(val => val.toString().padStart(6)).join(' ')} ]`);
     }
     
     let opcao;
