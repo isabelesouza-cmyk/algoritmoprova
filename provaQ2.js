@@ -29,7 +29,7 @@ function main() {
     }
     
     // Exibe a matriz formatada
-    console.log("\n=== MATRIZ ===");
+    console.log("\n--- MATRIZ ---");
     for (let i = 0; i < 3; i++) {
         console.log(`[ ${matriz[i].map(val => val.toString().padStart(6)).join(' ')} ]`);
     }
@@ -38,8 +38,8 @@ function main() {
     
     // Loop pedido
     do {
-        console.log("\n" + "=".repeat(40));
-        console.log("===OPÇÕES DO ARREY===");
+        console.log("\n" + "-".repeat(40));
+        console.log("--- OPÇÕES DO ARREY ---");
         console.log("-".repeat(40));
         console.log("1 - Informa o somatório de todos os elementos da linha 1");
         console.log("2 - Informa a multiplicação da diagonal da matriz");
@@ -47,12 +47,12 @@ function main() {
         console.log("4 - Encerra o programa");
         console.log("-".repeat(40));
         
-        opcao = readlineSync.question("\nInforme sua opção (1-4): ");
+        opcao = readlineSync.question("\nInforme sua opcao (1-4): ");
         
         switch (opcao) {
             case "1":
                 const somaLinha1 = matriz[0].reduce((acumulador, valorAtual) => acumulador + valorAtual, 0);
-                console.log(`\nSomatório da linha 1: ${somaLinha1}`);
+                console.log(`\nSomatorio da linha 1: ${somaLinha1}`);
                 break;
                 
             case "2":
@@ -60,7 +60,7 @@ function main() {
                 for (let i = 0; i < 3; i++) {
                     produtoDiagonal *= matriz[i][i];
                 }
-                console.log(`\nMultiplicação da diagonal: ${produtoDiagonal}`);
+                console.log(`\nMultiplicacao da diagonal: ${produtoDiagonal}`);
                 break;
                 
             case "3":
@@ -73,15 +73,15 @@ function main() {
                         }
                     }
                 }
-                console.log(`\nQuantidade de números pares: ${contadorPares}`);
+                console.log(`\nQuantidade de numeros pares: ${contadorPares}`);
                 break;
                 
             case "4":
-                console.log("\nPrograma encerrado. Até mais!");
+                console.log("\nPrograma encerrado.");
                 break;
                 
             default:
-                console.log("\nOpção inválida! Digite apenas 1, 2, 3 ou 4.");
+                console.log("\nOpcao invalida! Digite apenas 1, 2, 3 ou 4.");
         }
         
         // Aguarda confirmação antes de mostrar o menu novamente (exceto para sair)
