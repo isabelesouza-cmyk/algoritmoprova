@@ -13,9 +13,9 @@ class Cinema {
     }
 
     mostrarLayout() {
-        /** Exibe o layout atual das cadeiras (acima das informações) */
+        //Exibe o layout atual das cadeiras (acima das informações) 
         console.log("\n" + "=".repeat(50));
-        console.log("          LAYOUT DO CINEMA");
+        console.log("                    CINEMA");
         console.log("=".repeat(50));
         console.log("     Fileira 1  Fileira 2  Fileira 3  Fileira 4");
         
@@ -30,11 +30,10 @@ class Cinema {
         }
         
         console.log("\nLegenda: [L] = Livre, [X] = Ocupada");
-        console.log("=".repeat(50));
     }
 
     comprarIngresso() {
-        /** Processa a compra de um ingresso (abaixo do layout) */
+        // Processa a compra de um ingresso (abaixo do layout)
         console.log("\n" + "-".repeat(50));
         console.log("          COMPRA DE INGRESSO");
         console.log("-".repeat(50));
@@ -47,23 +46,23 @@ class Cinema {
                 
                 // Verifica se a posição é válida
                 if (linha < 0 || linha > 3 || fileira < 0 || fileira > 3) {
-                    console.log("Erro: Posição inválida! Use valores entre 1 e 4.");
+                    console.log("Erro! Posição inválida. Use valores entre 1 e 4.");
                     continue;
                 }
                 
                 // Verifica se a cadeira está livre
                 if (this.cadeiras[linha][fileira] === 'X') {
-                    console.log("Erro: Cadeira já ocupada! Escolha outra.");
+                    console.log("Erro! Cadeira já ocupada. Escolha outra.");
                     continue;
                 }
                 
-                // Reserva a cadeira
+                // Reserva a cadeira pedida pela última pessoa
                 this.cadeiras[linha][fileira] = 'X';
                 console.log("\nCOMPRA CONFIRMADA!");
                 console.log(`Cadeira reservada: Linha ${linha + 1}, Fileira ${fileira + 1}`);
-                console.log("Bom filme!");
+                console.log("Tenha um bom filme!");
                 
-                readline.question("\nPressione Enter para próximo cliente...");
+                readline.question("\nPressione 'Enter' para proximo cliente...");
                 return true;
                 
             } catch (error) {
@@ -73,9 +72,9 @@ class Cinema {
     }
 
     executarSistema() {
-        /** Loop principal do sistema */
+        // Loop de todo processo
         while (true) {
-            // Limpa a tela (simulado)
+            // Limpa a tela (pedido)
             console.clear();
             
             // Mostra o layout das cadeiras (ACIMA)
