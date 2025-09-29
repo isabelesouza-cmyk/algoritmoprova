@@ -1,12 +1,5 @@
 const readline = require('readline-sync');
 
-// Inicializa o sistema
-const cinema = new Cinema();
-console.log("SISTEMA DE VENDA DE INGRESSOS - CINEMA 4x4");
-console.log("O sistema ficará em loop contínuo para atender todos os clientes");
-
-cinema.executarSistema();
-
 class Cinema {
     constructor() {
         // Matriz 4x4 representando as cadeiras do cinema
@@ -92,3 +85,10 @@ class Cinema {
         }
     }
 }
+
+// Inicializa o sistema
+const cinema = new Cinema();
+console.log("SISTEMA DE VENDA DE INGRESSOS - CINEMA 4x4");
+console.log("O sistema ficará em loop contínuo para atender todos os clientes");
+
+cinema.executarSistema();
