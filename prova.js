@@ -34,7 +34,7 @@ class Cinema {
 
     comprarIngresso() {
         // Processa a compra de um ingresso (abaixo do layout)
-       
+       console.log("-".repeat(50));
         while (true) {
             try {
                 console.log("\nDigite a posição da cadeira desejada:");
