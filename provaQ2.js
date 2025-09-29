@@ -13,13 +13,13 @@ function main() {
             let valor;
             
             while (!valorValido) {
-                valor = readlineSync.question(`Digite o valor numérico para [${i+1}][${j+1}]: `);
+                valor = readlineSync.question(`Digite um valor para [${i+1}][${j+1}]: `);
                 
                 // Verifica se é um número válido
                 if (!isNaN(valor) && valor.trim() !== '') {
                     valorValido = true;
                 } else {
-                    console.log("Digite um número válido!");
+                    console.log("Digite um numero valido!");
                 }
             }
             
@@ -93,5 +93,4 @@ function main() {
 }
 
 // Executa o programa
-console.log("=== PROGRAMA MATRIZ 3x3 ===\n");
 main();
